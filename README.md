@@ -13,5 +13,5 @@ The implementation of RDRsegmenter, as described in [our paper](http://www.lrec-
 
 **Please CITE** our paper whenever RDRsegmenter is used to produce published results or incorporated into other software. 
 
-Author: Vinh Pham
+Translator: Vinh Pham
 
