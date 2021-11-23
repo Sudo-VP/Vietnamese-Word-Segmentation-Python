@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: vws
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/Sudo-VP/Vietnamese-Word-Segmentation-Python
+Author: vinhpx
+Author-email: phamxuanvinh023@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Sudo-VP/Vietnamese-Word-Segmentation-Python/issues
+Description: # word_segmenter
+        ## Chú ý: 
+        ### Bộ mã này được viết lại từ bộ RDRSegmenter: https://github.com/datquocnguyen/RDRsegmenter bằng Python với mục đích thuận tiện hơn cho việc sử dụng và tùy biến các công cụ NLP tiếng Việt
+        The implementation of RDRsegmenter, as described in [our paper](http://www.lrec-conf.org/proceedings/lrec2018/summaries/55.html):
+        
+        	@InProceedings{NguyenNVDJ2018,
+        	author={Dat Quoc Nguyen and Dai Quoc Nguyen and Thanh Vu and Mark Dras and Mark Johnson},
+        	title={{A Fast and Accurate Vietnamese Word Segmenter}},
+        	booktitle={Proceedings of the 11th International Conference on Language Resources and Evaluation (LREC 2018)},
+        	pages={2582--2587},
+        	year={2018}
+        	}
+        
+        **Please CITE** our paper whenever RDRsegmenter is used to produce published results or incorporated into other software. 
+        
+        Translator: Vinh Pham
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

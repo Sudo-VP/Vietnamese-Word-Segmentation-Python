@@ -15,3 +15,20 @@ The implementation of RDRsegmenter, as described in [our paper](http://www.lrec-
 
 Translator: Vinh Pham
 
+## Hướng dẫn sử dụng
+** REQUIRED Python3 **
+- python setup.py install
+- python -m pip install .
+
+## Ví dụ
+```
+>>> from vws import RDRSegmenter, Tokenizer
+>>> rdrsegment = RDRSegmenter.RDRSegmenter()
+>>> tokenizer = Tokenizer.Tokenizer()
+>>> output = rdrsegment.segmentRawSentences(tokenizer,"Lượng khách Thái bắt đầu gia tăng từ đầu năm 2005. Bên cạnh đó, kể từ tháng 10-2005 đến nay, từ khi được phép của VN, các đoàn caravan của Thái Lan cũng đã ồ ạt đổ vào VN.")
+>>> print(output)
+```
+Output:
+```
+>>> Lượng khách Thái bắt_đầu gia_tăng từ đầu năm 2005. Bên cạnh đó, kể từ tháng 10-2005 đến nay, từ khi được phép của VN, các đoàn caravan của Thái_Lan cũng đã ồ_ạt đổ vào VN.
+```

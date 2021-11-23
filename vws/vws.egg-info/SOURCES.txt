@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+vws/vws.egg-info/PKG-INFO
+vws/vws.egg-info/SOURCES.txt
+vws/vws.egg-info/dependency_links.txt
+vws/vws.egg-info/top_level.txt
