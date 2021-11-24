@@ -20,7 +20,9 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "vws"},
-    packages=setuptools.find_packages(where="vws"),
+    package_dir={"": "."},
+    packages=setuptools.find_packages(where="."),
+    package_data={'': ['Model.RDR','VnVocab.txt']},
+    include_package_data=True,
     python_requires=">=3.6",
 )
