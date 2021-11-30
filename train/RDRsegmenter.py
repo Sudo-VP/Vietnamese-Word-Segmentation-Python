@@ -28,7 +28,7 @@ def run(args = sys.argv[1:]):
             rdrTree = SCRDRTreeLearner(THRESHOLD[0], THRESHOLD[1]) 
             rdrTree.learnRDRTree(args[2], args[1])
             print "\nWrite the learned tree model to file ", args[2] + ".RDR"
-            rdrTree.writeToFile(args[2] + ".RDR")                
+            rdrTree.writeToFile(args[3] + ".RDR")                
             print '\nDone!'
         except Exception, e:
             print "\nERROR ==> ", e

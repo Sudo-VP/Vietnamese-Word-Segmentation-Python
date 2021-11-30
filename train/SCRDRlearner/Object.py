@@ -95,14 +95,13 @@ def getObjectDictionary(initializedCorpus, goldStandardCorpus):
         
         gold = goldStandardSens[j].strip()
         j += 1
-
         initWordTags = init.replace("“", "''").replace("”", "''").replace("\"", "''").split()
         goldWordTags = gold.replace("“", "''").replace("”", "''").replace("\"", "''").split()
         
         for k in xrange(len(initWordTags)):
+            
             initWord, initTag = getWordTag(initWordTags[k])
             goldWord, correctTag = getWordTag(goldWordTags[k])
-            
             if initWord != goldWord:
                 print "\nERROR ==> Raw texts extracted from the gold standard corpus and the initialized corpus are not the same!"
                 return None

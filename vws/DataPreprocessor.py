@@ -5,24 +5,23 @@ import sys
 
 class DataPreprocessor:
     def __init__(self):
-        self.initialSegmenter = RDRSegmenter()
+        self.initialSegmenter = RDRSegmenter(vocab_path='/home/ai/Downloads/vinhpx/cke/nlp/vws/vws/VnVocab.txt')
         self.utils = Utils()
 
     def getStringInitialSegmentation(self, strs: str):
         sb = []
-        line = str.trim()
+        line = strs.strip()
         if len(line) == 0:
             return "\n"
 
         wordtags = self.initialSegmenter.getInitialSegmentation(line)
-
         size = len(wordtags)
         for i in range(0, size):
             if wordtags[i].tag == "B":
-                sb.append(wordtags.get(i).form + "/B ")
+                sb.append(wordtags[i].form + "/B ")
             else:
-                sb.append(wordtags.get(i).form + "/I ")
-        return ''.join(sb).trim()
+                sb.append(wordtags[i].form + "/I ")
+        return ''.join(sb).strip()
 
     def getCorpusInitialSegmentation(self, inFilePath: str):
         with open(inFilePath, 'r', encoding="utf8") as buffer:
@@ -47,9 +46,9 @@ class DataPreprocessor:
                                     sb.append(syllabels[i] + " ")
                             bw.write("\n")
 
-                            bwInit.write(self.getStringInitialSegmentation(''.join(sb) + "\n"))
+                            bwInit.write(self.getStringInitialSegmentation(''.join(sb)) + "\n")
 
 
 if __name__ == '__main__':
     segmenter = DataPreprocessor()
-    segmenter.getCorpusInitialSegmentation(sys.argv[0])
+    segmenter.getCorpusInitialSegmentation(sys.argv[1])
